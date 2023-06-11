@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <title>Emoji Wall</title>
+    <style>
+        h1{text-align: center;color: #eeae0df2; font-size: 45px;}
+        body{background-color: black;
+            z-index: 3;
+        }
+        #emoji-wall {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        .emoji{
+            position: absolute;
+            cursor: pointer;
+        }
+        .emojisymbol{
+            display: inline-block;
+            cursor: pointer;
+            transition: ease-in-out 1s;
+        }
+        .emoji:hover::after {
+            content: attr(data-description);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            background-color: rgba(247, 15, 15, 0.89);
+            color: #fff;
+            font-size: 12px;
+            border-radius: 4px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: visibility 100, opacity 0.3s;
+            visibility: visible;
+            opacity: 10;
+        }   
+        .emojisymbol:hover{
+            cursor: pointer;
+           transform: scale(1.3)!important;
+        }
+    </style>
+</head>
+<body>
+    <h1>EMOJI WALL</h1>
+    <div id="emoji-wall">
+        <span class="emoji" style="top: 38%; left: 18%; font-size: 95px;" data-description="Smiling Face">
+            <span class="emojisymbol" style="transform:rotate( 10deg)">😀</span></span>
+        <span class="emoji" style="top:70%; left:40%; font-size: 75px;" data-description="Grinning Face with Big Eyes">
+            <span class="emojisymbol" style="transform:rotate(145deg)">😃</span></span>
+        <span class="emoji" style="top: 5%; left: 87%; font-size: 79px;" data-description="Grinning Face with Smiling Eyes">
+            <span class="emojisymbol" style="transform:rotate(340deg)">😄</span></span>
+        <span class="emoji" style="top: 80%; left: 10%; font-size: 80px;" data-description="Beaming Face with Smiling Eyes">
+            <span class="emojisymbol" style="transform:rotate(35deg)">😁</span></span>
+        <span class="emoji" style="top: 20%; left: 45%; font-size: 65px;"data-description="Grinning Squinting Face">
+            <span class="emojisymbol" style="transform:rotate(30deg)">😆</span></span>
+        <span class="emoji" style="top: 69%; left: 60%; font-size: 75px;"data-description="Grinning Face with Sweat">
+            <span class="emojisymbol" style="transform:rotate( 270deg)">😅</span></span>
+        <span class="emoji" style="top: 55%; left: 85%; font-size: 70px;"data-description="Face with Tears of Joy">
+            <span class="emojisymbol" style="transform:rotate(30deg)">😂</span></span>
+        <span class="emoji" style="top: 25%; left: 70%; font-size: 75px;"data-description="Rolling on the Floor Laughing">
+            <span class="emojisymbol" >🤣</span></span>
+        <span class="emoji" style="top: 5%; left: 5%; font-size: 90px;" data-description="Smiling Face with Smiling Eyes">
+            <span class="emojisymbol" style="transform:rotate(3deg)">😊</span></span>
+        <span class="emoji" style="top: 90%; left: 80%; font-size: 75px;" data-description="Smiling Face with Halo">
+            <span class="emojisymbol" style="transform:rotate(15deg)">😇</span></span>
+    </div>
+</body>
+</html>
